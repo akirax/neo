@@ -7,6 +7,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "start:linux": "electron . --ozone-platform=wayland",
     "package": "electron-builder --mac",
     "package:win": "electron-builder --win",
     "package:linux": "electron-builder --linux",
@@ -71,6 +72,9 @@
         }
       ],
       "category": "Office",
+      "executableArgs": [
+        "--ozone-platform=wayland"
+      ],
       "synopsis": "A distraction-free word processor for authors",
       "desktop": {
         "entry": {
